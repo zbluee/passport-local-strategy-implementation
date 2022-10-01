@@ -7,8 +7,8 @@ const verifyCallback = async (username, password, done) => {
         const user = await User.findOne({username});
         if(!user) done(null, false);
         const isValid = await user.validatePassword(password);
-        if(isValid) done(null, user);
-        else done(null, false);
+        if(!isValid) done(null, false);
+        done(null, user);
         
     } catch (error) {
         done(error);

@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { adminRoute, getLogin, getRegister, home, loginFailure, loginSuccess, logout, postRegister, protectedRoute } from '../controllers/main.js';
+import { adminsRoute, getLogin, getRegister, home, loginFailure, loginSuccess, logout, postRegister, protectedRoute } from '../controllers/main.js';
 import { adminMiddleware } from '../middleware/admin.js';
 import { authMiddleware } from '../middleware/auth.js';
 
@@ -21,7 +21,7 @@ router.route('/register')
 router.get('/logout', logout)
 router.get('/login-failure', loginFailure);
 router.get( '/protected-route',authMiddleware, protectedRoute);
-router.get('/admin-route', adminMiddleware, adminRoute)
+router.get('/admin-route', adminMiddleware, adminsRoute)
 router.get('/login-success', loginSuccess);
 
 

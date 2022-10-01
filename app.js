@@ -3,8 +3,6 @@ import 'express-async-errors';
 import express from 'express';
 import session from 'express-session';
 import passport from 'passport';
-import MongoStore from 'connect-mongo';
-import crypto from 'crypto';
 import path from 'path';
 import { mainRoute } from './routes/main.js';
 // middleware

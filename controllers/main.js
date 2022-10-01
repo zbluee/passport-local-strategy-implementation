@@ -21,7 +21,7 @@ const protectedRoute = async (req, res) => {
     res.send('<h1>You are authenticated</h1><p><a href="/logout">Logout and reload</a></p>'); 
 }
 
-const adminRoute = async (req, res) => {
+const adminsRoute = async (req, res) => {
     res.send('<h1>Admins route</h1><p><a href="/logout">Logout and reload</a></p>'); 
 }
 
@@ -43,4 +43,4 @@ const logout = async (req, res) => {
 }
 
 
-export { adminRoute, home, getLogin, getRegister, postRegister, protectedRoute, loginFailure, loginSuccess, logout}
+export { adminsRoute, home, getLogin, getRegister, postRegister, protectedRoute, loginFailure, loginSuccess, logout}
